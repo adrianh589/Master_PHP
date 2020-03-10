@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera pagina web</title>
+</head>
+<body>
+    <h1>Titulo de mi página</h1>
+    <h2>Welcome to my page</h2>
+
+    <h3>Formulario</h3>
+
+    <form>
+
+        <p>
+            <label for="nombre">Nombre: </label> <!-- Buena practica: referenciar el nombre del label al campo que corresponde -->
+            <input type="text" name="nombre" placeholder="Escribe tu nombre"/>
+        </p>
+
+        <p>
+            <label for="descripcion"></label>
+            <textarea name="descripcion"></textarea>
+        </p>
+
+        <input type="radio" name="genero" value="Hombre"> Hombre <br>
+        <input type="radio" name="genero" value="Mujer"> Mujer <br>
+        <input type="radio" name="genero" value="Nada"> Nada <br>
+
+        <select>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="nada">Nada</option>
+        </select>
+
+        <input type="submit" value="Enviar Formulario">
+    </form>
+
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not
+        only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s
+        with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including
+        versions of Lorem Ipsum.
+    </p>
+
+    <h3>Listado de frutas</h3>
+
+    <ol><!-- Lista ordenada -->
+            <li>Manzanas</li>
+                <ol> <!-- Sublista -->
+                    <li>Verde</li>
+                    <li>Roja</li>
+                </ol>
+            <li>Bananos</li>
+            <li>Naranjas</li>
+    </ol>
+
+    <h3>Listado de Automoviles</h3>
+
+        <ul><!-- Lista desordenada -->
+            <li>Mercedez
+                <ul> <!-- Sublista -->
+                    <li>CLA 200</li>
+                    <li>CLA 250</li>
+                </ul>
+            </li>
+            <li>Ferrari</li>
+            <li>Toyota</li>
+        </ul>
+
+    <hr/><!-- Sirve para añadir esa linea como separador -->
+    <h2>Listado de imagenes de linux</h2>
+    <img src="imagenes/img2.jpg" alt="Imagen no encontrada" title="foto de linux" width="250pxpx" height="250px">
+    <img src="imagenes/img3.jpg" alt="Imagen no encontrada" title="foto de linux" width="250pxpx" height="250px">  
+    <img src="imagenes/linuximg.png" alt="Imagen no encontrada" title="foto de linux" width="250pxpx" height="250px"> 
+    <img src="imagenes/img5.png" alt="Imagen no encontrada" title="foto de linux" width="250pxpx" height="250px"> 
+    <img src="imagenes/img.jpg" alt="Imagen no encontrada" title="foto de linux" width="250pxpx" height="250px">
+
+    <hr/>
+
+    <blockquote>
+         Lorem Ipsum is simply dummy text of the printing and typesetting
+    </blockquote> <!-- Sirve para citar -->
+
+<em>Parangaricutrimiacuaro</em><!-- Cursiva -->
+
+<span>Yuju</span><!-- No hace nada, pero sirve para usarlo en CSS -->
+
+<!-- El objetivo de una lista es mantener la información conjunta -->
+
+<h3>Usando tablas</h3>
+
+<table border="1"><!-- Con esto pintamos los bordes de la tabla -->
+    <tr><!-- Es para representar filas -->
+        <th>Nombre</th> <!-- Es para pintar una columna -->
+        <th>Apellido</th>
+        <th>Pais</th>  
+    </tr>
+    <tr>
+        <td rowspan="2">Camila</td><!-- Expande en forma de columna -->
+        <td>Hoyos</td>
+        <td>Colombia</td>
+    </tr>
+    <tr>
+        <td colspan="2">Márquez</td><!-- Sirve para expandir una celda en forma de columna -->
+    </tr>
+</table>
+
+<h3>Creando el horario de mi hermana</h3>
+
+<table border="1">
+
+    <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+    </tr>
+
+    <tr>
+        <td>6:15</td>
+        <td rowspan="2">Edu Fisica</td>
+        <td rowspan="2">Ingles</td>
+        <td rowspan="2">Artes</td>
+        <td rowspan="2">Matematicas</td>
+        <td rowspan="2">Biologia</td>
+    </tr>
+
+    <tr>
+        <td>8:19</td>
+    </tr>
+
+    <tr>
+        <td>8:20</td>
+        <td rowspan="2">Informatica</td>
+        <td rowspan="2">Edu. Fisica</td>
+        <td rowspan="2">Biologia</td>
+        <td rowspan="2">Sociales</td>
+        <td rowspan="2">Español</td>
+    </tr>
+
+    <tr>
+        <td>9:59</td>
+    </tr>
+
+    <tr>
+        <td>10:00</td>
+        <td rowspan="2" colspan="5">Descanso</td>
+    </tr>
+
+    <tr>
+        <td>10:29</td>
+    </tr>
+
+    <tr>
+        <td>10:30</td>
+        <td rowspan="2">Español</td>
+        <td>Español N.</td>
+        <td rowspan="2">Etica y religion</td>
+        <td rowspan="2">Formacion</td>
+        <td rowspan="2">Matematicas</td>
+    </tr>
+
+    <tr>
+        <td>12:14</td>
+        <td>Geometria</td>
+    </tr>
+
+    <tr>
+        <td>12:15</td>
+        <td rowspan="2" colspan="5">Almuerzo</td>
+    </tr>
+
+    <tr>
+         <td>13:59</td>
+    </tr>
+
+    <tr>
+        <td>13:30</td>
+        <td rowspan="2">Matematicas</td>
+        <td rowspan="2">Musica</td>
+        <td rowspan="2">Ingles</td>
+        <td rowspan="2">Ingles 2</td>
+        <td rowspan="2">Sociales</td>
+    </tr>
+
+    <tr>
+        <td>14:29</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
