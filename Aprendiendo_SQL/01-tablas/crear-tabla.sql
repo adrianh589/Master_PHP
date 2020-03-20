@@ -14,10 +14,15 @@ text 65000 caracteres
 Crear tabla
  */
 
+drop table if exists usuarios;
+
 create table usuarios(
-    id int(11),
-    nombres varchar(100),
-    apellidos varchar(255),
-    email varchar(100),
-    password varchar(255)
+    id int(11) not null auto_increment,
+    nombres varchar(100) not null ,
+    apellidos varchar(255) default'Hoyitos',
+    email varchar(100) not null ,
+    password varchar(255),
+    constraint pk_usuarios primary key (id)
 );
+
+describe usuarios;
