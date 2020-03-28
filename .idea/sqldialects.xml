@@ -2,5 +2,10 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/Aprendiendo_SQL/02-modificar-tablas/modificar.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Aprendiendo_SQL/03-diseño/blog.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Aprendiendo_SQL/04-DML/insert.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Aprendiendo_SQL/04-DML/select.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Aprendiendo_SQL/funciones/funciones.sql" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MariaDB" />
   </component>
 </project>
