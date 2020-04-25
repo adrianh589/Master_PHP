@@ -5,12 +5,12 @@
 
 <div id="principal">
 
-    <h1>Ultimas entradas</h1>
+    <h1>Todas las entradas</h1>
 
     <?php
-    $ultimasEntradas = conseguirEntradas($db, true);
-    if (!empty($ultimasEntradas)) :
-        while ($entrada = mysqli_fetch_assoc($ultimasEntradas)) :
+    $todasLasEntradas = conseguirEntradas($db);
+    if (!empty($todasLasEntradas)) :
+        while ($entrada = mysqli_fetch_assoc($todasLasEntradas)) :
             $palabra = $entrada['descripcion'];
             ?>
             <a href="entrada.php?id=<?=$entrada['id']?>">
@@ -19,7 +19,7 @@
                     <span class="fecha"> <?= $entrada['categoria'] . " | " .$entrada['fecha']  ?> </span>
                     <p>
                         <?=
-                            limitarPalabras($palabra, 7);
+                        limitarPalabras($palabra, 7);
                         ?>
                     </p>
                 </article>
@@ -28,9 +28,6 @@
         endwhile;
     endif;
     ?>
-    <div id="ver-todas">
-        <a href="entradas.php">Ver todas las entradas</a>
-    </div>
 
 </div>
 

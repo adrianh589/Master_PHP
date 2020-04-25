@@ -43,6 +43,12 @@ body{
     background-color: red;
 }
 
+.fecha{
+    color: #928989;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
 /*ESTILOS DE LA CABECERA*/
 #cabecera{
     width: 85%;
@@ -174,6 +180,7 @@ input[type="submit"],
 }
 
 .boton{
+    color: white !important;
     margin: 0 auto;
     width: 140px;
     margin-bottom: 8px;
@@ -187,6 +194,11 @@ input[type="submit"],
 .boton-verde{
     background-color: green;
     border: 3px solid #007c09;
+}
+
+.boton-rojo{
+    background-color: red;
+    border: 3px solid #7d0b0b;
 }
 
 /*PRINCIPAL*/

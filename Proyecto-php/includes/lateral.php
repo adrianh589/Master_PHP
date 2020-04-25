@@ -1,19 +1,30 @@
 
-<?php require_once('helpers.php'); ?>
-
 <!-- BARRA LATERAL -->
 <aside id="sidebar">
+
+    <div id="buscar" class="bloque">
+        <h3>Buscar</h3>
+
+        <form action="buscar.php" method="post">
+
+            <input type="text" name="busqueda">
+
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
 
     <?php if(isset($_SESSION['usuario'])) : ?>
         <div id = "usuario-logueado" class="bloque">
             <h3>Bienvenido <?= $_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos']; ?></h3>
             <!-- Botones -->
-            <a href="cerrar.php" class="boton">Cerrar sesion</a>
-            <a href="cerrar.php" class="boton boton-verde">Mis datos</a>
-            <a href="cerrar.php" class="boton boton-naranja">Crear entradas </a>
+            <a href="cerrar.php" class="boton boton-rojo">Cerrar sesion</a>
+            <a href="crear-categorias.php" class="boton boton-naranja">Crear categorias</a>
+            <a href="mis-datos.php" class="boton boton-verde">Mis datos</a>
+            <a href="crear-entradas.php" class="boton">Crear entradas </a>
         </div>
     <? endif; ?>
 
+    <?php if(!isset($_SESSION['usuario'])) : ?>
     <!-- LOGIN -->
     <div id="login" class="bloque">
         <h3>Identificate</h3>
@@ -72,5 +83,7 @@
         </form>
         <?php borrarErrores(); ?>
     </div>
+
+    <?php endif; ?>
 
 </aside>

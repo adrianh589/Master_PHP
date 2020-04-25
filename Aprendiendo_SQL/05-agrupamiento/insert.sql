@@ -17,10 +17,10 @@ INSERT INTO entradas VALUES (null, 2, 'todo sobre WOW', 'Estrategias para WOW', 
 INSERT INTO entradas VALUES (null, 2, 'Acerca de PES 2020', 'Trucos para realizar en PES 2020', current_date(), 4);
 
 
-INSERT INTO entradas VALUES (null, 3, 'COD replays', 'revie COD', current_date(), 1);
-INSERT INTO entradas VALUES (null, 3, 'GTA', 'Reviw de Fortnite', current_date(), 1);
-INSERT INTO entradas VALUES (null, 3, 'Formula 1 Juegazo', 'Review de F1', current_date(), 1);
-INSERT INTO entradas VALUES (null, 3, 'Formula 2 Juegazo', 'Review de F2', current_date(), 1);
+INSERT INTO entradas VALUES (null, 1, 'COD replays', 'revie COD', current_date(), 1);
+INSERT INTO entradas VALUES (null, 1, 'GTA', 'Reviw de Fortnite', current_date(), 1);
+INSERT INTO entradas VALUES (null, 1, 'Formula 1 Juegazo', 'Review de F1', current_date(), 1);
+INSERT INTO entradas VALUES (null, 1, 'Formula 2 Juegazo', 'Review de F2', current_date(), 1);
 
 select * from entradas;
 
