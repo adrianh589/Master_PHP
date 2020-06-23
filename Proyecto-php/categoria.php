@@ -6,7 +6,7 @@
     $todasLasEntradasCategoriaActual = conseguirEntradas($db, null, $_GET['id']) ;
 
     if(!isset($_GET['id'])){
-        header("Location: index.php");
+        header("Location: index_maqueta.php");
     }
 ?>
 

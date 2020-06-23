@@ -42,7 +42,7 @@ if (isset($_POST)) {
             $sql = "INSERT INTO entradas VALUES (NULL, $usuario, '$titulo', '$descripcion', CURDATE(), $categoria);";
         }
         $guardar = mysqli_query($db, $sql);
-        header("location: index.php");
+        header("location: index_maqueta.php");
     }else{
         $_SESSION['errores_entrada'] = $errores;
         if(isset($_GET['validar'])){

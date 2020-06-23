@@ -6,7 +6,7 @@
 //En caso de que no exista, simplemente sera redirigido a otra página
 $entradaActual = conseguirEntrada($db, $_GET['id']) ;
 if(!isset($_GET['id'])){
-    header("Location: index.php");
+    header("Location: index_maqueta.php");
 }
 ?>
 

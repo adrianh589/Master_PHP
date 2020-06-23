@@ -1,0 +1,394 @@
+/*GENERALES*/
+
+*{/*resetear los padding y los margins*/
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif, Helvetica;
+}
+
+body{
+    background: url(../img/bg.png);
+}
+
+a{
+    color: #01B1EA;
+}
+
+a:visited{
+    color: #01B1EA;
+}
+
+a:hover{
+    color: #555555;
+}
+
+/*CONTAINER*/
+#container{
+    width: 80%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 10px gray;
+    background: white;
+}
+
+/*HEADER*/
+
+#header{
+    height: 145px;
+    background: #F0F0F0;
+}
+
+#logo{
+    padding: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+#logo img{
+    float: left;
+    height: 100px;
+}
+
+#logo a{
+    float: left;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-family: "Noto Sans Old Permic", "Helvetica", "Arial", serif;
+    text-transform: uppercase;
+    color: #01B1BA;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: 25px;
+    text-shadow: 0px 2px 1px #222222;
+    transition: all 300ms;
+}
+
+#logo a:hover{
+    text-shadow: 0px 2px 1px #222222, 0px 0px 4px blue;
+}
+
+/*MENU*/
+
+#menu{
+    clear: both;
+    background: black;
+    color: white;
+    height: 55px;
+    border-bottom: 4px solid #01B1EA;
+}
+
+
+#menu ul{
+    list-style: none;/*quitar los punticos de la lista*/
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 25px;
+}
+
+#menu ul li{
+    line-height: 55px;
+}
+
+#menu a{
+    display: block;
+    float: left;
+    color: white;
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-right: 1px solid #363636;
+    transition: all 500ms;
+}
+
+#menu a:first-child{/*Para poner las lineas a los enlacas (a)*/
+    border-left: 1px solid #363636;
+}
+
+#menu a:hover{
+    background: #01B1EA;
+}
+
+/*CONTENT*/
+#content{
+    margin: 0px auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+/*BARRA LATERAL*/
+#lateral{
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#lateral .block_aside{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+#lateral h3{
+    display: block;
+    color: #222;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #E1E1E1;
+    border-bottom: 2px solid #01B1EA;
+}
+
+/*FORMS*/
+
+.form_container{
+    width: 50%;
+}
+
+label,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+label{
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+input[type="number"],
+select,
+textarea{
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 2px #CCC inset;
+    background: white;
+    padding: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select{
+    border: 1px solid #1579B5;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+.button
+{
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    color: white;
+    background: #2979CD;
+    border: 1px solid #11608E;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.button{
+    background: #00AA00;
+    color: white !important;
+    text-decoration: none;
+}
+
+.button-small{
+    width: 130px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-gestion{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button-red{
+    background: red;
+    border: 1px solid orangered;
+}
+
+#lateral ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#lateral ul li{
+    list-style: square;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*CENTRAL*/
+#central{
+    width: 70%;
+    min-height: 500px;
+    float: right;
+    border-left: 1px #CCC;
+    box-shadow: -5px -1px 5px #DDD;
+    padding: 25px;
+}
+
+#central h1{
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/*PRODUCTO*/
+.product{
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product_img{
+    display: block;
+    margin: 0px auto;
+    height: 150px;
+    width: 150px;
+}
+
+.product a{
+    color: black;
+    text-decoration: none;
+}
+
+.product a:hover{
+    color: #555555;
+}
+
+.product h2{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product img{
+    height: 170px;
+    margin-bottom: 10px;
+}
+
+.product p{
+    margin-bottom: 10px;
+}
+
+#detail-product{
+    width: 100%;
+
+}
+
+#detail-product .image{
+    display: block;
+    width: 40%;
+    float: left;
+    margin-right: 40px;
+}
+
+#detail-product img{
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+#detail-product .data{
+    width: 45%;
+    float: right;
+}
+
+#detail-product .price{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #444444;
+}
+
+#detail-product .description{
+    margin-bottom: 20px;
+}
+
+#detail-product .button{
+    width: 200px;
+    text-align: center;
+}
+
+/*FOOTER*/
+
+#footer{
+    clear: both;
+    text-align: center;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    color: white;
+    background-color: #222222;
+    border-top: 4px solid #007EE5;
+}
+
+/*ALERTS*/
+.alert_red{
+    color: red;
+}
+
+.alert_green{
+    color: green;
+}
+
+/*TABLE*/
+table{
+    text-align: center;
+    width: 100%;
+    border: 1px solid transparent;
+}
+
+td{
+    padding: 2px;
+    border-top: 1px solid #CCCCCC;
+}
+
+.total-carrito{
+    float: right;
+}
+
+/*CARRITO*/
+.button_pedido{
+    display: block;
+    width: 120px;
+}
+
+.button-carrito{
+    display: block;
+    width: 10px;
+    margin: 0px auto;
+}

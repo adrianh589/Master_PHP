@@ -35,7 +35,7 @@ class NotaController
         //echo $nota->db->error;
         //die();
         //Vista
-        header("Location: index.php?controller=Nota&action=listar");
+        header("Location: index_maqueta.php?controller=Nota&action=listar");
     }
 
     public function borrar()

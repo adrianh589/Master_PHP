@@ -34,11 +34,11 @@ if (!empty($_POST['nombre']) && !empty($_POST['apellidos']) && !empty($_POST['ed
 
 }else{
     $error = "faltan valroes";
-    header("Location: index.php?error=$error");
+    header("Location: index_maqueta.php?error=$error");
 }
 
 if($error != 'ok'){
-    header("Location: index.php?error=$error");
+    header("Location: index_maqueta.php?error=$error");
 }
 
 ?>

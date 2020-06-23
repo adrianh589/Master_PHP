@@ -69,12 +69,12 @@ if (isset($_POST)) {
         }
     }else{
         $_SESSION['errores'] = $errores;
-        header("Location: index.php");
+        header("Location: index_maqueta.php");
     }
 }
 
 //Redireccionamos al inicio
-header("Location: index.php");
+header("Location: index_maqueta.php");
 
 
 

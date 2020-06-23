@@ -25,4 +25,4 @@ if(isset($_POST)){
     }
 }
 
-header("location: index.php");
+header("location: index_maqueta.php");
