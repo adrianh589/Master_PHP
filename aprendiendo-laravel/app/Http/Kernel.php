@@ -4,6 +4,7 @@ namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
+//Aqui es donde damos de alta a los middleware
 class Kernel extends HttpKernel
 {
     /**
@@ -50,6 +51,8 @@ class Kernel extends HttpKernel
      *
      * These middleware may be assigned to groups or used individually.
      *
+     * ACA ES DONDE SE AÑADEN LOS MIDDLEWARES QUE NOSOTROS MISMOS HEMOS CREADO
+     *
      * @var array
      */
     protected $routeMiddleware = [
@@ -63,5 +66,6 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'testyear' => \App\Http\Middleware\TestYear::class
     ];
 }
