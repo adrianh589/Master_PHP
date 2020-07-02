@@ -1,0 +1,82 @@
+{% extends 'layouts/master.html.twig' %}
+
+{% block titulo %}
+    Animales
+{% endblock %}
+
+{% block cabecera %}
+    {{ parent() }} <!-- Con parent llamamos al contenido de la plantilla maestra -->
+    <h1>{{ title }}</h1>
+{% endblock %}
+
+{% block contenido %}
+    {# Esto es un comentario en twig
+    <h1>{{ title }}</h1>
+    <h2>Tu nombre es: {{ nombre }}</h2>
+    <h3>Tus apellidos son: {{ apellidos }}</h3>
+    #}
+
+    {# Crear variables en twig #}
+
+    {% set perro = 'Dobberman' %}
+
+    <h4>{{ perro }}</h4>
+
+    {# Trabajar con arrays #}
+    <h3>Los animales son:</h3>
+    {{ dump(animales) }} <!-- Con dump se impirmen los arrays en twig -->
+    {{ animales[1] }} <!-- Asi se saca un elemento -->
+
+    {# Trabajar con arrays asociativos #}
+    {{ dump(especies_animales) }}
+    {{ especies_animales.Perros.0 ~ ' ' ~ especies_animales.Perros.1 }}{# Asi se imprimen elementos en concreto, la ~ es para concatenar #}
+
+
+    {# Condicionales #}
+    {% if especies_animales.Perros.0 == 'dobberman' %}
+        <h2>Si es un dobberman, cuidado</h2>
+    {% else %}
+        <h2>NO es un dobberman, rela</h2>
+    {% endif %}
+
+    {# Bucles #}
+    {% if especies_animales|length >= 1 %} {# Esto es como hacer un count en PHP #}
+        <ul>
+            {% for clave, especie in especies_animales %}
+                <li>
+                    Especie: {{ clave }},
+                    Animal:
+                    {% for animal in especie %}
+                        {{ animal }},
+                    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {# Mismo pero mas reducido, solo saca el primer indice de cada uno #}
+    {% for especie in especies_animales %}
+        <li>
+            {{ especie.0 }}
+        </li>
+    {% endfor %}
+
+    {# Para sacar numeros #}
+    {% for i in 0..10 %}
+       * {{ i }}<br>
+    {% endfor %}
+
+    {% if especies_animales.Pajaros.0 starts with 'p' %} {# starts with, obviamente es por la condicion que nosotros queramos validar por la que comience #}
+        <h1>Empieza por g</h1>
+    {% endif %}
+
+    {% if especies_animales.Pajaros.0 ends with 'h' %} {# ends with, obviamente es por la condicion que nosotros queramos validar por la que termine #}
+        <h1>Termina por h</h1>
+    {% endif %}
+
+    <hr>
+
+    {{ include('partials/funciones.html.twig', {'nombre': 'Adian Hoyos'}) }}
+
+
+{% endblock %}

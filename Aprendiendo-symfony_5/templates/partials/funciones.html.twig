@@ -1,0 +1,79 @@
+{# Funciones predifinidas #}
+<hr>
+
+{{ nombre }}
+
+<h1>Funciones</h1>
+{{ min([8,5,3,1,0,5]) }} {# Saca el numero minimo #}
+
+<br>
+
+{{ random(animales) }}
+
+<br>
+{{ max([8,5,3,1,0,5]) }} {# Saca el numero maximo #}
+
+<br>
+
+{% for i in range(0, 100, 5) %} {# Esta funcion es range(inicio, final, salto) #}
+    * {{ i }}<br>
+{% endfor %}
+
+<h1>Filtros</h1>
+{{ animales|length }}
+
+{% set email = '      email@email.com      ' %}
+{{ dump(email|trim|upper|lower) }}{# Algunas de las funciones de twig #}
+
+{# Se crearon en la carpeta src/Twig, luego mediante el comando
+php bin/console make:twig-extension MiFiltro se creo el archivo de configuracion,
+por ultimo se registro en config/services.yaml#}
+
+<h1>Extensiones personalizadas</h1>
+{{ multiplicarFunction(2)|raw }} {# por funcion Raw es para que me reconozca las etiquetas html #}
+
+{{ 12|multiplicar_filtro|raw }} {# Por filtro #}
+
+{# Comando para ver las rutas configuradas hasta el momento:
+   php bin/console debug:route #}
+
+{# Comando para crear la BD automaticamente luego de configararle en .env
+    php bin/console doctrine:database:create #}
+
+{# 2 maneras de crear las entidades:
+    -Consola -> Comando:
+    -Manual#}
+
+{# A diferencia de Laravel que era sencillo representar un objeto de la BD
+ Unicamente creandolo, en Symfony hay que hacer un paso mas , para ello en la
+ consola se ejecuta lo siguiente:
+
+php bin/console doctrine:mapping:import "App\Entity" annotation --path=src/Entity
+                                                          |       |
+                                                          |     Lugar donde queramos guardar
+                                                          |
+                                    puede ser yml si no queremos anotaciones
+
+
+Luego de haber generado las entidades, tenemos que generar sus getters y setters
+con el siguiente comando:
+
+php bin/console make:entity --regenerate App
+
+Comando para llevar a la base de datos las entidades que tengo en Symfony,
+auqnue este mira las diferencias y nso pregunta si queremos exportarlo
+
+php bin/console doctrine:migrations:diff
+
+Comando para llevar hacia la base de datos la migracion
+
+php bin/console doctrine:migrations:migrate
+
+Las migraciones es un versionamiento de las bases de datos
+
+
+Comando para ejecturar querys por consola, ademas que me tra los objeto en un formato muy legible
+Array de arrays.
+php bin/console doctrine:query:sql "SELECT * FROM animales"
+
+ #}

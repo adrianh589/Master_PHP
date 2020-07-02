@@ -1,0 +1,12 @@
+
+<h1>Este formulario con sf 5</h1>
+
+{% for message in app.session.flashBag.get('message')  %}
+    {{ message }}
+{%  endfor %}
+
+{{ form_start(form) }} <!-- Imprimir el formulario -->
+
+{{ form_widget(form) }} <!-- Imprimir los campos del formulario -->
+
+{{ form_end(form) }}<!-- Cerrar el formulario -->
