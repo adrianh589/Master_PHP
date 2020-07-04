@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Todas las tareas{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+        <h2> {{ task_user.title }} ✅</h2>
+
+        <p class="data-task">
+            {{ 'Tarea creada por: ' ~ task_user.user.name ~ ' ' ~ task_user.user.surname }}
+            <br>
+            {{ task_user.createdAt|date('d/m/Y H:i') }}
+            <br>
+            {% set prioridad = task_user.priority %}
+            {{ prioridad == 'high' ? 'Alta' : prioridad == 'medium' ? 'medio' : prioridad == 'low' ? 'bajo' }}
+        </p>
+
+        <p>{{ task_user.content }}</p>
+
+        {{ dump(task_user) }}
+
+    </div>
+{% endblock %}

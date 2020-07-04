@@ -1,0 +1,150 @@
+body {
+    background-color: white;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+    background: #F5F5F5;
+    padding: 2px 6px;
+}
+
+#header{
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+#menu{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #EEEEEE;
+    line-height: 50px;
+}
+
+#menu a{
+    color: #444444;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+#menu li{
+    display: block;
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: 1px solid #CCCCCC;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#menu .right{
+    float: right !important;
+    border-right: 0px;
+    border-left: 1px solid #CCCCCC;
+}
+
+#menu li:hover{
+    background: #444444;
+}
+
+#menu li:hover a{
+    color: white;
+}
+
+label{
+    display: block;
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select,
+input[type="number"]
+{
+    width: 70%;
+    padding: 8px;
+}
+
+button,
+input[type="submit"]{
+    padding: 8px;
+    margin-top: 15px;
+    background: darkgreen;
+    color: white;
+    border: 1px solid darkgreen;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    background: #718C00;
+}
+
+/*Tabla de tareas*/
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+table th,
+table td
+{
+    padding: 15px;
+    border-bottom: 1px solid #EEEEEE;
+    padding-right: 25px;
+    padding-left: 25px;
+    background: #F6F6F6;
+}
+
+table td{
+    background: beige;
+}
+
+.buttons{
+    width: 44%;
+}
+
+.buttons a{
+    text-decoration: none;
+    border: 1px solid #444444;
+    padding: 10px;
+    color: white;
+    background: limegreen;
+    border-color: darkgreen;
+}
+
+.buttons .edit{
+    background: sandybrown;
+    border-color: yellow;
+}
+
+.buttons .delete{
+    background: red;
+    border-color: darkred;
+}
+
+.data-task{
+    color: gray;
+}
+
